@@ -1,0 +1,4 @@
+#!/bin/sh
+~/.config/.screenlayout/homescreens.sh &
+~ &
+exec qtile start
