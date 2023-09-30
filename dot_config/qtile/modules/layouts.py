@@ -1,7 +1,7 @@
 from libqtile import layout
 from libqtile.config import Match
 layouts = [
-    layout.Spiral(margin = 10, border_width = 0)
+    layout.Spiral(margin = 15, border_width = 0)
     # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),

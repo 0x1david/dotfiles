@@ -8,6 +8,7 @@ PS1='[\u@\h \W]\$ '
 alias cd='z'
 alias b='z ..'
 alias vim='nvim'
+alias fz='zi'
 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa

@@ -1,6 +1,6 @@
 from libqtile.command import lazy
 from libqtile.config import Key, Click, Drag
-from .preferences import terminal, browser, mod, notes
+from .preferences import terminal, browser, browser_app, mod, notes
 
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
@@ -23,11 +23,13 @@ keys = [
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
+
     Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
     Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -38,9 +40,14 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod], "F2", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "F3", lazy.spawn(browser), desc="Launch Browser"),
-    Key([mod], "F8", lazy.spawn(notes), desc="Launch Browser"),
+
+    #Apps
+    Key([], "F11", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([], "F1", lazy.spawn(browser), desc="Launch brave"),
+    Key([], "F2", lazy.spawn(browser_app + "https://google.com"), desc="Launch google"),
+    Key([], "F3", lazy.spawn(browser_app + "https://chat.openai.com"), desc="Launch chatgpt"),
+    Key([], "F4", lazy.spawn(browser_app + "https://youtube.com"), desc="Launch youtube"),
+    Key([], "F6", lazy.spawn(notes), desc="Launch Browser"),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),

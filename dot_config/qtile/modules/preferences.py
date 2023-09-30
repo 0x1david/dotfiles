@@ -1,6 +1,7 @@
 import os
 mod = "mod4"
-browser = "firefox"
+browser = "brave"
+browser_app = "brave --app="
 notes = "obsidian"
 power_menu = os.path.expanduser('~/.config/qtile/powermenu.sh')
 terminal = "kitty"
