@@ -46,7 +46,8 @@ keys = [
     Key([], "F1", lazy.spawn(browser), desc="Launch brave"),
     Key([], "F2", lazy.spawn(browser_app + "https://google.com"), desc="Launch google"),
     Key([], "F3", lazy.spawn(browser_app + "https://chat.openai.com"), desc="Launch chatgpt"),
-    Key([], "F4", lazy.spawn(browser_app + "https://youtube.com"), desc="Launch youtube"),
+    Key([], "F4", lazy.spawn(browser_app + "https://github.com"), desc="Launch github"),
+    Key([], "F5", lazy.spawn(browser_app + "https://youtube.com"), desc="Launch youtube"),
     Key([], "F6", lazy.spawn(notes), desc="Launch Browser"),
 
     # Toggle between different layouts as defined below
