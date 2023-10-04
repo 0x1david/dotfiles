@@ -9,5 +9,5 @@ import subprocess
 
 @hook.subscribe.startup_once
 def start_once():
-    subprocess.call([home + '/.config/qtile/autostart.sh'])
+    subprocess.call([home + '/.config/qtile/bash/autostart.sh'])
 

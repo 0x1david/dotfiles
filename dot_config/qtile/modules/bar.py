@@ -124,12 +124,6 @@ screens = [
                     background=colors["transparent"],
                 ),
                 widget.Sep(linewidth=0, padding=20, size_percent=40),
-                # widget.CheckUpdates(
-                #     colour_have_updates=colors['cream'],
-                #     colour_no_updates = colors['cream'],
-                #     padding = 10,
-                #    # **decoration_group
-                # ),
                 widget.Clock(
                     foreground=colors['green'],
                     padding = 10,
