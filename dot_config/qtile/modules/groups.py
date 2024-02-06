@@ -39,9 +39,6 @@ groups = [
     ScratchPad("OBS", [
         DropDown("obsidian",'obsidian "obsidian://open?vault=Engineering"'  , opacity=0.9, x=0.25 ,y=0.15, height=0.7, width=0.5)
     ]),
-    ScratchPad("WEB", [
-        DropDown("browser", browser_app + "https://google.com", opacity=0.9, x=0.25 ,y=0.15, height=0.7, width=0.5)
-    ]),
     ScratchPad("AUD", [
         DropDown("spotify", music_player , opacity=0.6, x=0.32 ,y=0.25, height=0.5, width=0.34)
     ]),
@@ -55,7 +52,6 @@ keys.extend([
             Key([mod], "slash", lazy.group["DOC"].toscreen(), desc="Switch to group {}".format("DOC"),),
             Key([mod, "control"], "slash", lazy.window.togroup("DOC", switch_group=True), desc="Switch to & move focused window to group {}".format("DOC"),), 
             Key([mod], "F11", lazy.group['CMD'].dropdown_toggle('term')),
-            Key([], "F12", lazy.group['WEB'].dropdown_toggle('browser')),
             Key([mod], "F12", lazy.group["OBS"].dropdown_toggle('obsidian')),
             Key([mod, "control"], "F12", lazy.group["AUD"].dropdown_toggle('spotify')),
 

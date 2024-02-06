@@ -1,0 +1,28 @@
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
+zstyle :compinstall filename '/home/flxvs/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=10000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias cd='z' # Assuming you have a function or tool named 'z' for directory navigation
+alias b='z ..'
+alias vim='nvim' # Make sure you have neovim installed
+alias fz='zi' # Ensure the command 'zi' is defined elsewhere in your .zshrc or linked to a function or script
+PROMPT='[%n@%m %1~]$ '
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_ed25519
+eval "$(zoxide init zsh)"
+clear
