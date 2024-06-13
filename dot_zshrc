@@ -115,5 +115,9 @@ eval "$(zoxide init zsh)"
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:git:branch color green 
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH="$HOME/.ghcup/bin:$PATH"
+
 
 clear
