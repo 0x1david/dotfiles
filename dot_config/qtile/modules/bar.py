@@ -105,7 +105,7 @@ screens = [
                 ),
                 widget.Sep(linewidth=0, padding=10, size_percent=40),
                 widget.Net(
-                    interface="wlan0",
+                    interface="wlp8s0",
                     format="{down} ↓↑ {up}",
                     foreground=colors["magenta"],
                     background=colors["transparent"],

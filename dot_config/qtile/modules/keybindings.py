@@ -1,4 +1,4 @@
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile.config import Key, Click, Drag
 from .preferences import terminal, browser, browser_app, mod, notes, launcher
 from .scripts import switch_group 
@@ -49,7 +49,7 @@ keys = [
     Key([], "F12", lazy.spawn(launcher), desc="Launch rofi"),
     Key([], "F1", lazy.spawn(browser), desc="Launch brave"),
     Key([], "F2", lazy.spawn(browser_app + "https://google.com"), desc="Launch google"),
-    Key([], "F3", lazy.spawn(browser_app + "https://chat.openai.com"), desc="Launch chatgpt"),
+    Key([], "F3", lazy.spawn(browser_app + "https://claude.ai"), desc="Launch chatgpt"),
     Key([], "F4", lazy.spawn(browser_app + "https://github.com"), desc="Launch github"),
     Key([], "F5", lazy.spawn(browser_app + "https://youtube.com"), desc="Launch youtube"),
     Key([], "F6", lazy.spawn(notes), desc="Launch Browser"),
