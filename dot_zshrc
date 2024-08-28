@@ -103,10 +103,13 @@ source $ZSH/oh-my-zsh.sh
 # End of lines configured by zsh-newuser-install
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias cd='z' # Assuming you have a function or tool named 'z' for directory navigation
+alias cd='z'
+alias lc_rs='find . -name "*.rs" | xargs sed -e '"'"'/^\s*\/\//d;/^\s*\/\*/,/\*\//d'"'"' | sed -e '"'"'/^\s*$/d'"'"' | wc -l'
+alias lc_py='find . -name "*.py" | xargs sed -e '"'"'/^\s*#/d'"'"' | sed -e '"'"'/^\s*$/d'"'"' | wc -l'
+alias lc_c='find . -name "*.c" | xargs sed -e '"'"'/^\s*\/\//d;/^\s*\/\*/,/\*\//d'"'"' | sed -e '"'"'/^\s*$/d'"'"' | wc -l'
 alias b='z ..'
-alias vim='nvim' # Make sure you have neovim installed
-alias fz='zi' # Ensure the command 'zi' is defined elsewhere in your .zshrc or linked to a function or script
+alias vim='nvim'
+alias fz='zi'
 #PROMPT='[%n@%m %1~]$ '
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_ed25519

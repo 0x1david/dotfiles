@@ -92,6 +92,14 @@ screens = [
                     background=colors['transparent'],
                 ),
                 widget.Sep(linewidth=0, padding=20, size_percent=40),
+                widget.Net(
+                    interface="wlp8s0",
+                    format="{down} ↓↑ {up}",
+                    foreground=colors["magenta"],
+                    background=colors["transparent"],
+                    prefix="k",
+                ),
+                widget.Sep(linewidth=0, padding=15, size_percent=40),
                 widget.TextBox(
                     text=" ",
                     foreground=colors["cyan"],
@@ -103,15 +111,7 @@ screens = [
                     foreground=colors["cyan"],
                     limit_max_volume="True",
                 ),
-                widget.Sep(linewidth=0, padding=10, size_percent=40),
-                widget.Net(
-                    interface="wlp8s0",
-                    format="{down} ↓↑ {up}",
-                    foreground=colors["magenta"],
-                    background=colors["transparent"],
-                    prefix="k",
-                ),
-                widget.Sep(linewidth=0, padding=20, size_percent=40),
+                widget.Sep(linewidth=0, padding=13, size_percent=40),
                 widget.TextBox(
                     text=" ",
                     font="Font Awesome 6 Free Solid",

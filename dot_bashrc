@@ -2,6 +2,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias lc_rust='find . -name "*.rs" | xargs sed -e '"'"'/^\s*\/\//d;/^\s*\/\*/,/\*\//d'"'"' | sed -e '"'"'/^\s*$/d'"'"' | wc -l'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 

@@ -55,6 +55,7 @@ keys = [
     Key([], "F6", lazy.spawn(notes), desc="Launch Browser"),
     Key([], "F7", lazy.spawn(browser_app + "https://asana.com"), desc="Launch asana"),
     Key([], "F8", lazy.spawn("code"), desc="Launch vscode"),
+    Key([], "F10", lazy.spawn(browser_app + "https://mail.proton.me"), desc="Launch ProtonMail"),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
