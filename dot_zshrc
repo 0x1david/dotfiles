@@ -110,6 +110,11 @@ alias lc_c='find . -name "*.c" | xargs sed -e '"'"'/^\s*\/\//d;/^\s*\/\*/,/\*\//
 alias b='z ..'
 alias vim='nvim'
 alias fz='zi'
+
+# Project Shortcuts
+alias project='cargo run --'
+alias neotext='cargo run --manifest-path ~/repositories/rust/neotext/Cargo.toml --'
+
 #PROMPT='[%n@%m %1~]$ '
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_ed25519
