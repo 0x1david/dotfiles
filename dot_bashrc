@@ -10,6 +10,7 @@ alias cd='z'
 alias b='z ..'
 alias vim='nvim'
 alias fz='zi'
+alias python='python3'
 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
