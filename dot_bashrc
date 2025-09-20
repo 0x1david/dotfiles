@@ -11,6 +11,7 @@ alias b='z ..'
 alias vim='nvim'
 alias fz='zi'
 alias python='python3'
+alias clippy='cargo clippy -- -W clippy::all -W clippy::pedantic -W clippy::nursery -W clippy::cargo'
 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
