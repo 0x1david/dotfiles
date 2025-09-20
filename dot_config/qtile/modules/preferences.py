@@ -1,6 +1,6 @@
 import os
 mod = "mod4"
-browser = "brave"
+browser = "flatpak run app.zen_browser.zen"
 browser_app = "brave --app="
 notes = "obsidian"
 power_menu = os.path.expanduser('~/.config/qtile/bash/powermenu.sh')

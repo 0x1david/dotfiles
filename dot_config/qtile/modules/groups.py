@@ -53,7 +53,7 @@ keys.extend([
             Key([mod, "control"], "slash", lazy.window.togroup("DOC", switch_group=True), desc="Switch to & move focused window to group {}".format("DOC"),), 
             Key([mod], "F11", lazy.group['CMD'].dropdown_toggle('term')),
             Key([mod], "F12", lazy.group["OBS"].dropdown_toggle('obsidian')),
-            Key([mod, "control"], "F12", lazy.group["AUD"].dropdown_toggle('spotify')),
+            Key([mod, "shift"], "F12", lazy.group["AUD"].dropdown_toggle('spotify')),
 
                 ]
             )

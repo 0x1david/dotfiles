@@ -1,9 +1,10 @@
 from libqtile import bar, widget, qtile
 from libqtile.config import Screen
-from qtile_extras import widget
+# Remove qtile-extras widget import to use built-in systray
 from qtile_extras.widget.decorations import PowerLineDecoration, RectDecoration, BorderDecoration
 from .preferences import launcher, power_menu
 from .colorscheme import theme as colors
+
 def open_pavu():
     qtile.cmd_spawn("pavucontrol")
 
@@ -86,6 +87,7 @@ screens = [
                     ],
                  ),
                 widget.Spacer(),
+                # Use built-in qtile Systray instead of qtile-extras
                 widget.Systray(
                     icon_size = 16,
                     padding = 20,
@@ -101,7 +103,7 @@ screens = [
                 ),
                 widget.Sep(linewidth=0, padding=15, size_percent=40),
                 widget.TextBox(
-                    text=" ",
+                    text=" ",
                     foreground=colors["cyan"],
                     background=colors["transparent"],
                     font="Font Awesome 10 Free Solid",
@@ -113,7 +115,7 @@ screens = [
                 ),
                 widget.Sep(linewidth=0, padding=13, size_percent=40),
                 widget.TextBox(
-                    text=" ",
+                    text=" ",
                     font="Font Awesome 6 Free Solid",
                     foreground=colors["yellow"],
                     background=colors["transparent"], 
@@ -127,12 +129,12 @@ screens = [
                 widget.Clock(
                     foreground=colors['green'],
                     padding = 10,
-                    format="  %I:%M %p",
+                    format="  %I:%M %p",
                     **decoration_group
                 ),
                 widget.Sep(linewidth=0, padding=15, size_percent=40),
                 widget.TextBox(
-                    text='  ',
+                    text='  ',
                     foreground=colors['red'],
                     padding=20,
                     **decoration_group,
