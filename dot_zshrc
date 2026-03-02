@@ -131,5 +131,7 @@ zstyle :prompt:pure:git:branch color green
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.ghcup/bin:$PATH"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 clear
+export PATH="$HOME/.local/bin:$PATH"
