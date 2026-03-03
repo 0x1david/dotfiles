@@ -1,0 +1,33 @@
+font-family = JetBrains Mono
+font-size = 12
+font-style = Regular
+font-style-bold = Bold
+font-style-italic = Italic
+font-style-bold-italic = Bold Italic
+
+bell-features = no-system,no-audio,no-attention,no-title,no-border
+
+background = #242730
+foreground = #bbc2cf
+selection-background = #6A8FBF
+selection-foreground = #bbc2cf
+
+cursor-color = #bbc2cf
+cursor-text = #242730
+
+palette = 0=#2a2e38
+palette = 1=#ff665c
+palette = 2=#7bc275
+palette = 3=#fcce7b
+palette = 4=#51afef
+palette = 5=#C57BDB
+palette = 6=#5cEfFF
+palette = 7=#DFDFDF
+palette = 8=#484854
+palette = 9=#ff665c
+palette = 10=#99bb66
+palette = 11=#ecbe7b
+palette = 12=#51afef
+palette = 13=#c678dd
+palette = 14=#46D9FF
+palette = 15=#bbc2cf

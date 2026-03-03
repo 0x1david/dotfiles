@@ -1,0 +1,18 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+[scratchpads.obsidian]
+command = "obsidian"
+class = "obsidian"
+size = "50% 70%"
+position = "25% 15%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.spotify]
+command = "spotify"
+class = "spotify"
+size = "34% 50%"
+position = "32% 25%"
+unfocus = "hide"
+lazy = true

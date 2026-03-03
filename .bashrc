@@ -1,0 +1,19 @@
+# ~/.bashrc
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias lc_rust='find . -name "*.rs" | xargs sed -e '"'"'/^\s*\/\//d;/^\s*\/\*/,/\*\//d'"'"' | sed -e '"'"'/^\s*$/d'"'"' | wc -l'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+alias cd='z'
+alias b='z ..'
+alias vim='nvim'
+alias fz='zi'
+alias python='python3'
+alias clippy='cargo clippy -- -W clippy::all -W clippy::pedantic -W clippy::nursery -W clippy::cargo'
+
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+eval "$(zoxide init bash)"
+clear

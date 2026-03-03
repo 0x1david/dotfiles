@@ -1,0 +1,7 @@
+# SSH - never commit private keys
+.ssh/id_*
+.ssh/known_hosts*
+.ssh/agent
+
+# Hyprland wallpapers
+.config/hypr/wallpapers/
