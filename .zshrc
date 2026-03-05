@@ -5,6 +5,13 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -132,5 +139,9 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 clear
 export PATH="$HOME/.local/bin:$PATH"
 
+# Home/End key bindings
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
 # Dotfiles bare repo alias
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
