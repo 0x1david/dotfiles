@@ -126,11 +126,11 @@ alias clippy='cargo clippy -- -W clippy::all -W clippy::pedantic -W clippy::nurs
 eval $(opam env)
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_ed25519
-eval "$(zoxide init zsh)"
 # .zshrc
+fpath+=~/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
-zstyle :prompt:pure:git:branch color green 
+zstyle :prompt:pure:git:branch color green
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.ghcup/bin:$PATH"
@@ -145,3 +145,5 @@ bindkey '^[[F' end-of-line
 
 # Dotfiles bare repo alias
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+eval "$(zoxide init zsh)"
