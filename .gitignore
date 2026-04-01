@@ -5,3 +5,9 @@
 
 # Hyprland wallpapers
 .config/hypr/wallpapers/
+.plans/
+.research
+.claude
+**/.claude/settings.local.json
+.brainstorm
+.design/

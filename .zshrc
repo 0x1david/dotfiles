@@ -5,12 +5,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# History
+# History (sizes set before omz, options set after omz source)
 HISTFILE=~/.zsh_history
 HISTSIZE=50000
 SAVEHIST=50000
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_DUPS
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -83,6 +81,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
 
+# History options — must come AFTER oh-my-zsh source (omz overrides earlier settings)
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -120,6 +122,7 @@ alias b='z ..'
 alias vim='nvim'
 alias fz='zi'
 alias python='python3'
+alias pgadmin4='/usr/pgadmin4/venv/bin/python /usr/pgadmin4/web/pgAdmin4.py'
 alias clippy='cargo clippy -- -W clippy::all -W clippy::pedantic -W clippy::nursery -W clippy::cargo'
 
 #PROMPT='[%n@%m %1~]$ '
@@ -135,6 +138,9 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export JAVA_HOME="/opt/android-studio/jbr"
+export ANDROID_HOME="$HOME/Android/Sdk"  # capital S — matches Android Studio default
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
 
 clear
 export PATH="$HOME/.local/bin:$PATH"
