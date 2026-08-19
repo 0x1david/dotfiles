@@ -11,7 +11,7 @@ lazy = true
 
 [scratchpads.spotify]
 command = "spotify"
-class = "spotify"
+class = "Spotify"
 size = "34% 50%"
 position = "32% 25%"
 unfocus = "hide"

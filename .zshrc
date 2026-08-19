@@ -153,3 +153,5 @@ bindkey '^[[F' end-of-line
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 eval "$(zoxide init zsh)"
+
+export CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING=1
